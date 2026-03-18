@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function RegisterPage() {
   const [idFile, setIdFile] = useState<File | null>(null);
@@ -29,15 +30,11 @@ export default function RegisterPage() {
             </h3>
 
             <div className="grid gap-3">
-
               <input type="text" placeholder="First Name" className="input" />
               <input type="text" placeholder="Middle Name (Optional)" className="input" />
               <input type="text" placeholder="Last Name" className="input" />
-
               <textarea placeholder="Address" className="input" />
-
               <input type="number" placeholder="Age" className="input" />
-
             </div>
           </div>
 
@@ -95,7 +92,6 @@ export default function RegisterPage() {
                 <span className="text-sm text-gray-600">
                   Take Selfie
                 </span>
-
                 <input
                   type="file"
                   accept="image/*"
@@ -109,7 +105,6 @@ export default function RegisterPage() {
                 <span className="text-sm text-gray-600">
                   Record Video Verification
                 </span>
-
                 <input
                   type="file"
                   accept="video/*"
@@ -129,6 +124,14 @@ export default function RegisterPage() {
           <button className="w-full bg-cyan-600 text-white py-3 rounded-xl font-medium hover:bg-cyan-700 transition">
             Create Account
           </button>
+
+          {/* SIGN IN LINK */}
+          <p className="text-center text-sm text-gray-500 mt-2">
+            Already have an account?{" "}
+            <Link href="/auth/login" className="text-cyan-600 hover:underline">
+              Sign in
+            </Link>
+          </p>
 
           <div className="flex items-center">
             <div className="flex-1 h-px bg-gray-200" />
