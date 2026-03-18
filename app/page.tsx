@@ -8,7 +8,7 @@ const products = [
   {
     id: 1,
     name: "Carwash Vendo Machine",
-    price: "₱120,000",
+    price: "65,000",
     image: "/images/machine1.jpg",
     description:
       "A fully automated carwash vending system designed for high traffic areas.",
@@ -16,7 +16,7 @@ const products = [
   {
     id: 2,
     name: "Mini Vendo Machine",
-    price: "₱85,000",
+    price: "49,000",
     image: "/images/machine1.jpg",
     description:
       "Compact vending solution ideal for small carwash businesses.",
@@ -24,7 +24,7 @@ const products = [
   {
     id: 3,
     name: "Premium Vendo Machine",
-    price: "₱200,000",
+    price: "55,000",
     image: "/images/machine1.jpg",
     description:
       "High capacity machine with advanced payment integrations.",
@@ -51,7 +51,10 @@ export default function Home() {
           {/* Desktop Menu */}
           <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
             <li><a href="#products" className="hover:text-cyan-600">Products</a></li>
-            <li><a href="#payment" className="hover:text-cyan-600">Payment</a></li>
+                        <li><a href="#products" className="hover:text-cyan-600">Blog</a></li>
+            <li><a href="#products" className="hover:text-cyan-600">FAQ</a></li>
+
+            {/* <li><a href="#payment" className="hover:text-cyan-600">Payment</a></li> */}
             <li><a href="#about" className="hover:text-cyan-600">About</a></li>
           </ul>
 
@@ -97,6 +100,7 @@ export default function Home() {
           backgroundImage: "url('/images/hero-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundColor: "white"
         }}
       >
 
@@ -105,7 +109,7 @@ export default function Home() {
         <div className="relative z-10 px-4 max-w-xl">
 
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Smart Carwash Vending Machines
+            VendoPro
           </h2>
 
           <p className="mb-6">
@@ -127,7 +131,7 @@ export default function Home() {
       <section id="products" className="py-16 px-4 bg-gray-50">
 
         <h3 className="text-3xl font-bold text-center mb-10">
-          Our Machines
+          Our Product's
         </h3>
 
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto">
@@ -186,8 +190,7 @@ export default function Home() {
       {/* PAYMENT */}
       <section id="payment" className="py-16 px-4 text-center max-w-6xl mx-auto">
 
-        <h3 className="text-3xl font-bold mb-10">Payment Options</h3>
-
+        <h3 className="text-3xl font-bold mb-10">Payment Info</h3>
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
 
           <div className="border p-6 rounded-xl shadow">
@@ -204,7 +207,6 @@ export default function Home() {
             <h4 className="font-semibold mb-2">Financing</h4>
             <p>Partner financing available for qualified buyers.</p>
           </div>
-
         </div>
 
       </section>
